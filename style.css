@@ -10,17 +10,15 @@ body {
   padding: 0;
   font-family: 'Cormorant Garamond', serif;
   background-color: #fff;
-  background-image: url('chain.png'); /* Replace with your actual filename */
+  background-image: url('chain.png'); /* Only in body! */
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain; /* or 100% auto */
-}
-
+  background-size: contain;
   color: var(--black);
 }
 
 header {
-  background: var(--white);
+  background: #fff;
   padding: 1em 2em;
   display: flex;
   justify-content: space-between;
@@ -64,16 +62,13 @@ section {
   padding: 3em 2em;
   max-width: 1200px;
   margin: auto;
-   background-image: url("https://raw.githubusercontent.com/hol-lie/filthChains/refs/heads/main/chain.png");
-  background-size: 100%;        /* or 'contain' or a fixed px value */
-  background-repeat: no-repeat;  /* prevents tiling */
-  background-position: center;  
+  /* No background image here */
 }
 
 h2 {
   font-family: 'UnifrakturCook', serif;
   font-size: 2em;
-  color: var(--white);
+  color: var(--black);
 }
 
 .grid {
@@ -112,7 +107,7 @@ form button {
 
 footer {
   padding: 2em;
-  background: var(white);
+  background: #fff;
   text-align: center;
   font-size: 0.9em;
   border-top: 1px solid var(--steel-grey);
@@ -124,6 +119,6 @@ footer {
 
 .social-icons a {
   margin: 0 0.5em;
-  color: var(white);
+  color: var(--black);
   text-decoration: none;
 }
