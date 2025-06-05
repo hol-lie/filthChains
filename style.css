@@ -7,13 +7,15 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Cormorant Garamond', serif;
-  background-color: var(--white);
-  background-image: url("https://raw.githubusercontent.com/hol-lie/filthChains/refs/heads/main/chain.png");
-  background-size: 100%;        /* or 'contain' or a fixed px value */
-  background-repeat: no-repeat;  /* prevents tiling */
-  background-position: center;   /* keeps it centered */
+  background-color: #fff;
+  background-image: url('chain.png'); /* Replace with your actual filename */
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain; /* or 100% auto */
 }
+
   color: var(--black);
 }
 
