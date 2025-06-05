@@ -12,7 +12,7 @@ body {
   background-color: #fff;
   background-image: url('chain.png'); /* Replace with your actual filename */
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
   background-size: contain; /* or 100% auto */
 }
 
