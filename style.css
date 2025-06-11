@@ -274,24 +274,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
- .pile-gallery {
-    height: 900px; /* taller canvas for vertical flow */
-    padding: 1em;
+  .pile-gallery {
+    height: auto; /* allow vertical expansion */
+    min-height: 600px;
   }
 
   .pile-img {
-    max-width: 140px;
-    transform: none; /* reduce rotation chaos */
+    max-width: 120px;
   }
-
-  .img1 { top: 20px; left: 5%; }
-  .img2 { top: 100px; left: 55%; }
-  .img3 { top: 180px; left: 25%; }
-  .img4 { top: 260px; left: 60%; }
-  .img5 { top: 360px; left: 10%; }
-  .img6 { top: 460px; left: 50%; }
-  .img7 { top: 580px; left: 20%; }
-}
 
   .about-content {
     flex-direction: column;
@@ -307,6 +297,4 @@ footer {
     max-width: 100%;
     padding: 1.5em;
   }
-
-  footer {
-    f
+}
