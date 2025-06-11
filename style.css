@@ -48,16 +48,6 @@ nav a {
   margin-bottom: 1.5em;
 }
 
-.hero button {
-  background: var(--blood-red);
-  border: none;
-  color: white;
-  padding: 0.8em 1.5em;
-  margin: 0.5em;
-  cursor: pointer;
-  font-weight: bold;
-}
-
 section {
   padding: 3em 2em;
   max-width: 1200px;
