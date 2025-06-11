@@ -12,7 +12,7 @@ body {
   background-image: url('chain.png'); /* Only in body! */
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 800px;
+  background-size: 1000px;
   color: var(--black);
 }
 
