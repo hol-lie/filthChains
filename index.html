@@ -1,97 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filth Chains</title>
+<head>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Meta and Fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filth Chains</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+
+
+<body>
 
     <section class="hero">
       <h1>Filth Chains</h1>
       <p>Divine. Damned. Handmade.</p>
     </section>
+      
+    
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="pile-gallery">
+    <img src="images/rachel_1.png" class="pile-img img1" alt="Rachel">
+    <img src="images/knighttime_1.png" class="pile-img img2" alt="Knighttime">
+    <img src="images/roxy_2.png" class="pile-img img3" alt="Roxy">
+    <img src="images/rachel_3.png" class="pile-img img4" alt="Rachel 2">
+    <img src="images/knighttime_2.png" class="pile-img img5" alt="Knighttime 2">
+    <img src="images/roxy_3.png" class="pile-img img6" alt="Roxy 2">
+    <img src="images/raidne_3.png" class="pile-img img7" alt="Raidne">
+  </div>
+</section>
+    <section id="necklace">
+        <div class="product">
+          <model-viewer src="models/jesusnecklace.glb"
+                        alt="Filth Chain Top"
+                        auto-rotate
+                        camera-controls
+                        camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 600px;">
+          </model-viewer>
+        </div> 
+
+
 
     <section id="shop">
       <h2>Shop</h2>
       <div class="grid">
         <div class="product">
- <model-viewer src="necklace1.glb"
-                alt="Filth Chain Necklace"
-                auto-rotate
-                camera-controls
-                style="width: 100%; height: 500px;">
-  </model-viewer>        </div>
-        <div class="product">Piece 2</div>
-        <div class="product">Piece 3</div>
-        <div class="product">Piece 4</div>
-        <div class="product">Piece 5</div>
-        <div class="product">Piece 6</div>
+          Top
+          <model-viewer src="models/top.glb"
+                        alt="Filth Chain Top"
+                        auto-rotate
+                        camera-controls
+                        camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 400px;">
+          </model-viewer>
+        </div> 
+    
+        <div class="product">
+          Necklace
+          <model-viewer src="models/necklace1.glb"
+                        alt="Filth Chain Necklace"
+                        auto-rotate
+                        camera-controls
+                       camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 400px;">
+          </model-viewer>
+        </div>
+    
+        <div class="product">
+          Earrings
+          <model-viewer src="models/boneearrings.glb"
+                        alt="Filth Chain Earrings"
+                        auto-rotate
+                        camera-controls
+                      camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 400px;">
+          </model-viewer>
+        </div>
       </div>
     </section>
+    
+<section id="customs">
+  <h2>Custom Order Form</h2>
+  <form action="https://formsubmit.co/info@hollieleggett.com"method="POST">
+    <input type="hidden" name="_captcha" value="false">
 
-    <section id="customs">
-      <h2>Custom Order Form</h2>
-      <form>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Surname" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" required />
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="grid">
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-      </div>
-    </section>
+    <label for="surname">Surname</label>
+    <input id="surname" name="surname" type="text" placeholder="Your surname" required />
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="Your email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="What would you like to order?" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+
 
     <section id="about">
       <h2>About</h2>
-      <p>
+      <div class="about-content">
+        <div class="about-text">  <h2>
         Filth Chains is a femme-owned chainmail brand specializing in
         handcrafted accessories and garments that blur the line between the
         sacred and the profane. Rooted in gothic aesthetics and inspired by
         religious iconography, each piece merges intricate metalwork with a raw,
         unapologetic edge.
-      </p>
-      <div class="grid bio">
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
+   </h2>
       </div>
+      <div class="about-image">
+        <img src="images/filthChains-11.jpg" />
+      </div>
+      </div>
+    
     </section>
 
     <footer id="contact">
-      <div class="social-icons">
-        <a href="#">IG</a>
-        <a href="#">Email</a>
-        <a href="#">TikTok</a>
-      </div>
-      <p>© Filth Chains 2025 — Minneapolis</p>
-    </footer>
+  <div class="social-icons">
+    <a href="https://instagram.com/filthchains" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+  <p>© Filth Chains 2025 — Minneapolis</p>
+</footer>
+
   </body>
 </html>

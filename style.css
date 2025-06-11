@@ -5,20 +5,34 @@
   --steel-grey: #5A5A5A;
 }
 
+/* ============================
+   Base Styles
+============================ */
 body {
- 
+  margin-top: 200px;
   font-family: 'Cormorant Garamond', serif;
   background-color: #fff;
-  background-image: url('chain.png'); /* Only in body! */
+  background-image: url('chain.png'), url("chain2.png");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;
+  background-position: top center, bottom center;
+  background-size: 1250px, 1000px;
   color: var(--black);
 }
 
+/* ============================
+   Typography
+============================ */
+h2 {
+  font-family: 'UnifrakturCook', serif;
+  font-size: 2em;
+  color: var(--black);
+}
+
+/* ============================
+   Header & Nav
+============================ */
 header {
   background: #fff;
-  padding: 1em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,9 +45,11 @@ nav a {
   font-weight: bold;
 }
 
+/* ============================
+   Hero Section
+============================ */
 .hero {
   text-align: center;
-  padding: 5em 1em;
 }
 
 .hero h1 {
@@ -47,39 +63,115 @@ nav a {
   margin-bottom: 1.5em;
 }
 
+/* ============================
+   Section Wrapper
+============================ */
 section {
   padding: 3em 2em;
   max-width: 1200px;
   margin: auto;
-  /* No background image here */
 }
 
-h2 {
-  font-family: 'UnifrakturCook', serif;
-  font-size: 2em;
-  color: var(--black);
-}
-
+/* ============================
+   Grid Layouts
+============================ */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   margin-top: 1.5em;
 }
 
-.product, .gallery img, .bio img {
-  background: var(--steel-grey);
-  height: 300px;
+/* ============================
+   Pile Gallery
+============================ */
+.pile-gallery {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.pile-img {
+  position: absolute;
+  max-width: 200px;
+  transition: transform 0.3s;
+  cursor: grab;
+}
+
+/* Controlled chaos layout */
+.img1 {
+  top: 30px;
+  left: 10%;
+  transform: rotate(-5deg);
+}
+
+.img2 {
+  top: 80px;
+  left: 45%;
+  transform: rotate(6deg);
+}
+
+.img3 {
+  top: 200px;
+  left: 20%;
+  transform: rotate(-8deg);
+}
+
+.img4 {
+  top: 150px;
+  left: 65%;
+  transform: rotate(4deg);
+}
+
+.img5 {
+  top: 320px;
+  left: 35%;
+  transform: rotate(-10deg);
+}
+
+.img6 {
+  top: 400px;
+  left: 75%;
+  transform: rotate(3deg);
+}
+
+.img7 {
+  top: 500px;
+  left: 15%;
+  transform: rotate(7deg);
+}
+/* ============================
+  jesus necklace
+============================ */
+#necklace .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================
+   Form
+============================ */
+
+form, 
+form input, 
+form textarea, 
+form button {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 form {
-  background: var(--steel-grey);
+  background: var(--black); /* new black background */
   padding: 2em;
   max-width: 400px;
   margin: auto;
+  color: var(--ash-white); /* ensure readable text */
 }
 
-form input, form textarea {
+
+form input,
+form textarea {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -93,7 +185,41 @@ form button {
   border: none;
   cursor: pointer;
 }
+form button:hover {
+  background: var(--black);
+  color: var(--ash-white);
+}
 
+/* ============================
+   About Section (2-column)
+============================ */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--steel-grey);
+}
+
+/* ============================
+   Footer
+============================ */
 footer {
   padding: 2em;
   background: #fff;
@@ -111,3 +237,76 @@ footer {
   color: var(--black);
   text-decoration: none;
 }
+
+
+/* ============================
+   Mobile Styles (max 768px)
+============================ */
+@media (max-width: 768px) {
+  body {
+    margin-top: 100px; /* less top margin on small screens */
+    background-size: contain;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 2em 1em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+ .pile-gallery {
+    height: 900px; /* taller canvas for vertical flow */
+    padding: 1em;
+  }
+
+  .pile-img {
+    max-width: 140px;
+    transform: none; /* reduce rotation chaos */
+  }
+
+  .img1 { top: 20px; left: 5%; }
+  .img2 { top: 100px; left: 55%; }
+  .img3 { top: 180px; left: 25%; }
+  .img4 { top: 260px; left: 60%; }
+  .img5 { top: 360px; left: 10%; }
+  .img6 { top: 460px; left: 50%; }
+  .img7 { top: 580px; left: 20%; }
+}
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    margin-top: 1em;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5em;
+  }
+
+  footer {
+    f
