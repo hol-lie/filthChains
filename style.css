@@ -191,6 +191,40 @@ form button:hover {
 }
 
 /* ============================
+Shop Section (2-column)
+============================ */
+.roxy-cloud {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.cloud-img {
+  position: absolute;
+  width: 150px;
+  border-radius: 8px;
+  opacity: 0.9;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.cloud-img:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Positioning individual images */
+.img1 {
+  top: 0;
+  left: 20%;
+}
+
+.img2 {
+  top: 50px;
+  left: 40%;
+}
+
+/* ============================
    About Section (2-column)
 ============================ */
 .about-content {

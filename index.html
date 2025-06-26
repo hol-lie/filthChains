@@ -11,8 +11,8 @@
 
   <!-- Model Viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <base href="/filthChains/">
-
+  <!-- <base href="/filthChains/">
+ -->
 </head>
 
 
@@ -50,11 +50,10 @@
 
 
 
-    <section id="shop">
-      <h2>Shop</h2>
+    <section id="3dGallery">
+      <h2>xxx</h2>
       <div class="grid">
         <div class="product">
-          Top
           <model-viewer src="models/top.glb"
                         alt="Filth Chain Top"
                         auto-rotate
@@ -63,6 +62,36 @@
                         style="width: 75%; height: 400px;">
           </model-viewer>
         </div> 
+    
+        <div class="product">
+          <model-viewer src="models/necklace1.glb"
+                        alt="Filth Chain Necklace"
+                        auto-rotate
+                        camera-controls
+                       camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 400px;">
+          </model-viewer>
+        </div>
+    
+        <div class="product">
+          <model-viewer src="models/boneearrings.glb"
+                        alt="Filth Chain Earrings"
+                        auto-rotate
+                        camera-controls
+                      camera-orbit="0deg 0deg 2.5m"
+                        style="width: 75%; height: 400px;">
+          </model-viewer>
+        </div>
+      </div>
+    </section>
+    
+        <section id="shop">
+      <h2>Shop</h2>
+      <div class="roxy-cloud">
+  <img src="images/roxy_2.png" class="cloud-img img1" alt="Roxy">
+  <img src="images/roxy_3.png" class="cloud-img img2" alt="Roxy 2">
+</div>
+
     
         <div class="product">
           Necklace
@@ -87,7 +116,6 @@
         </div>
       </div>
     </section>
-    
 <section id="customs">
   <h2>Custom Order Form</h2>
   <form action="https://formsubmit.co/info@hollieleggett.com"method="POST">
