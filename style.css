@@ -57,10 +57,44 @@ nav a {
   font-size: 4em;
   color: var(--black);
 }
+/* ============================
+   button
+============================ */
+.scroll-button {
+  margin-top: 2em;
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-family: 'Cormorant Garamond', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.scroll-button:hover {
+  background-color: var(--blood-red);
+}
+
+/* ============================
+   model viewer
+============================ */
 .hero p {
   font-size: 1.5em;
   margin-bottom: 1.5em;
+}
+.necklace-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 2em 0;
+}
+
+@media (max-width: 768px) {
+  .necklace-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================
@@ -72,75 +106,55 @@ section {
   margin: auto;
 }
 
-/* ============================
-   Grid Layouts
-============================ */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-  margin-top: 1.5em;
-}
-
-/* ============================
-   Pile Gallery
-============================ */
-.pile-gallery {
+.glider-contain {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2em 0;
   position: relative;
-  width: 100%;
-  height: 700px;
   overflow: hidden;
 }
 
-.pile-img {
+.glider {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1em 0;
+}
+
+.glider img {
+  flex-shrink: 0;
+  width: 300px;
+  height: 600px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 8px;
+}
+
+.glider-prev,
+.glider-next {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  cursor: pointer;
   position: absolute;
-  max-width: 200px;
-  transition: transform 0.3s;
-  cursor: grab;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
-/* Controlled chaos layout */
-.img1 {
-  top: 30px;
-  left: 10%;
-  transform: rotate(-5deg);
+.glider-prev {
+  left: 100px;
 }
 
-.img2 {
-  top: 80px;
-  left: 45%;
-  transform: rotate(6deg);
+.glider-next {
+  right: 100px;
 }
 
-.img3 {
-  top: 200px;
-  left: 20%;
-  transform: rotate(-8deg);
-}
 
-.img4 {
-  top: 150px;
-  left: 65%;
-  transform: rotate(4deg);
-}
-
-.img5 {
-  top: 320px;
-  left: 35%;
-  transform: rotate(-10deg);
-}
-
-.img6 {
-  top: 400px;
-  left: 75%;
-  transform: rotate(3deg);
-}
-
-.img7 {
-  top: 500px;
-  left: 15%;
-  transform: rotate(7deg);
-}
 /* ============================
   jesus necklace
 ============================ */
@@ -193,35 +207,77 @@ form button:hover {
 /* ============================
 Shop Section (2-column)
 ============================ */
-.roxy-cloud {
-  position: relative;
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.product-card {
+  width: 259px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card img {
   width: 100%;
-  height: 300px;
-  margin-bottom: 2rem;
+  height: auto;
+  display: block;
 }
 
-.cloud-img {
-  position: absolute;
-  width: 150px;
-  border-radius: 8px;
-  opacity: 0.9;
-  transform: rotate(-5deg);
-  transition: transform 0.3s ease;
+.card-content {
+  padding: 1em;
+  text-align: center;
 }
 
-.cloud-img:hover {
-  transform: rotate(0deg) scale(1.05);
+.card-content .price {
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 
-/* Positioning individual images */
-.img1 {
-  top: 0;
-  left: 20%;
+.card-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-.img2 {
-  top: 50px;
-  left: 40%;
+
+/* ============================
+   page break
+============================ */
+.page-break {
+  background-image: url('images/Section_background.png'); /* adjust path */
+  background-size: cover;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4em 2em;
+  color: white; /* if your background is dark */
+}
+/* ============================
+   page break
+============================ */
+.page-break_top{
+  background-image: url('models/page_break.png');
+  background-size: cover;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4em 2em;
+  color: white; /* if your background is dark */
 }
 
 /* ============================
@@ -287,6 +343,15 @@ footer {
     align-items: flex-start;
     padding: 1em;
   }
+
+  .glider img {
+  flex-shrink: 0;
+  width: 150px;
+  height: 300px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 8px;
+}
 
   nav a {
     margin: 0.5em 0;

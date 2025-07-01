@@ -13,6 +13,7 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <!-- <base href="/filthChains/">
  -->
+  
 </head>
 
 
@@ -22,21 +23,71 @@
     <section class="hero">
       <h1>Filth Chains</h1>
       <p>Divine. Damned. Handmade.</p>
+      <button class="scroll-button" onclick="document.getElementById('3dGallery').scrollIntoView({ behavior: 'smooth' });">
+  Shop Now
+</button>
     </section>
+
+        <!-- page break -->
+
+<section class="page-break_top">
+</section>
+
       
+<!-- <section id="gallery">
+  <div class="glider-contain">
+    <button class="glider-prev">«</button>
+
+    <div class="glider">
+      <img src="images/rachel_1.png" alt="Rachel">
+      <img src="images/roxy_2.png" alt="Roxy">
+      <img src="images/knighttime_1.png" alt="Knighttime">
+      <img src="images/raidne_3.png" alt="Raidne">
+    </div>
+
+    <button class="glider-next">»</button>
+  </div>
+</section> -->
+
+
+
+
+   <section id="necklace-gallery" class="section-bg necklace-bg">
+  <div class="necklace-grid">
     
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="pile-gallery">
-    <img src="images/rachel_1.png" class="pile-img img1" alt="Rachel">
-    <img src="images/knighttime_1.png" class="pile-img img2" alt="Knighttime">
-    <img src="images/roxy_2.png" class="pile-img img3" alt="Roxy">
-    <img src="images/rachel_3.png" class="pile-img img4" alt="Rachel 2">
-    <img src="images/knighttime_2.png" class="pile-img img5" alt="Knighttime 2">
-    <img src="images/roxy_3.png" class="pile-img img6" alt="Roxy 2">
-    <img src="images/raidne_3.png" class="pile-img img7" alt="Raidne">
+    <!-- Necklace 1 -->
+    <model-viewer 
+      src="models/raidne.glb"
+      alt="Necklace 1"
+      auto-rotate
+      camera-controls
+      style="width: 100%; height: 400px;">
+    </model-viewer>
+
+    <!-- Necklace 2 -->
+    <model-viewer 
+      src="models/knighttime.glb"
+      alt="Necklace 2"
+      auto-rotate
+      camera-controls
+      style="width: 100%; height: 400px;">
+    </model-viewer>
+
+    <!-- Necklace 3 -->
+    <model-viewer 
+      src="models/roxy.glb"
+      alt="Necklace 3"
+      auto-rotate
+      camera-controls
+      style="width: 100%; height: 400px;">
+    </model-viewer>
+
   </div>
 </section>
+
+
+
+
     <section id="necklace">
         <div class="product">
           <model-viewer src="models/jesusnecklace.glb"
@@ -48,122 +99,91 @@
           </model-viewer>
         </div> 
 
-
-
 <section id="3dGallery" style="padding: 2em 1em;">
-  <div style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    font-family: 'Cormorant Garamond', serif;
-  ">
-
- <section id="3dGallery" style="padding: 2em 1em;">
-  <div style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    max-width: 100%;
-    box-sizing: border-box;
-  ">
-
+  <h2>Premade Pieces</h2>
+  <div class="product-card-container">
+    
     <!-- Product Card 1 -->
-<section id="3dGallery" style="padding: 2em 1em;">
-  <div style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    font-family: 'Cormorant Garamond', serif;
-  ">
-
-    <!-- Product Card 1 -->
-    <div class="product-card" style="
-      flex: 1 1 280px;
-      max-width: 300px;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    ">
-      <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/f42f61dcf5b759a7fbb923e2199377cc12291dd7/original.jpeg"
-           alt="TEST– Collar"
-           onerror="this.style.display='none'"
-           style="width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
-      <div style="padding: 1em;">
-        <p style="margin: 0.5em 0; font-size: 1.1em;">TEST– Collar</p>
-        <p style="margin: 0.5em 0; font-weight: bold;">$0.01</p>
-        <a target="_blank"
-           href="https://square.link/u/NgANYXmV?src=embed"
-           style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">
-          Buy Now
-        </a>
+    <div class="product-card">
+      <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/6c11e6385d72e82a0335b8c36d334a2308d95cbe/original.png" alt="Chain Mail Bikini Top" onerror="this.style.display='none'" />
+      <div class="card-content">
+        <p>Chain Mail Bikini Top</p>
+        <p class="price">$0.02</p>
+        <a target="_blank" href="https://square.link/u/ckzA1Wzc?src=embed">Buy now</a>
       </div>
     </div>
 
     <!-- Product Card 2 -->
-    <div class="product-card" style="
-      flex: 1 1 280px;
-      max-width: 300px;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    ">
-      <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/f42f61dcf5b759a7fbb923e2199377cc12291dd7/original.jpeg"
-           alt="TEST– Collar"
-           onerror="this.style.display='none'"
-           style="width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
-      <div style="padding: 1em;">
-        <p style="margin: 0.5em 0; font-size: 1.1em;">TEST– Collar</p>
-        <p style="margin: 0.5em 0; font-weight: bold;">$0.01</p>
-        <a target="_blank"
-           href="https://square.link/u/NgANYXmV?src=embed"
-           style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">
-          Buy Now
-        </a>
+    <div class="product-card">
+      <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/643eee2d228712f77d8902186d79fbd4f00189aa/original.png" alt="Chain Mail Full Set" onerror="this.style.display='none'" />
+      <div class="card-content">
+        <p>Chain Mail Full Set</p>
+        <p class="price">$0.02</p>
+        <a target="_blank" href="https://square.link/u/K1bfG4I4?src=embed">Buy now</a>
       </div>
     </div>
 
-        <!-- Product Card 2 -->
-    <div class="product-card" style="
-      flex: 1 1 280px;
-      max-width: 300px;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    ">
-      <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/f42f61dcf5b759a7fbb923e2199377cc12291dd7/original.jpeg"
-           alt="TEST– Collar"
-           onerror="this.style.display='none'"
-           style="width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
-  <a href="https://checkout.square.site/merchant/ML71C2SF4TFQE/checkout/YJDB67KVJJ3HHHGNZMLWYIO2"
-   target="_blank"
-   style="display: inline-block;
-          padding: 12px 24px;
-          background-color: black;
-          color: white;
-          text-decoration: none;
-          font-family: 'Cormorant Garamond', serif;
-          border-radius: 6px;
-          font-size: 1em;
-          font-weight: bold;">
-  Order Now
-</a>
-    </div>
-
+    <!-- Product Card 3 -->
+  <div class="product-card">
+  <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/6e23b5f26db7c8377f7e629f59649ab215906b13/original.png" alt="Chain Mail Skirt" onerror="this.style.display='none'" />
+  <div class="card-content">
+    <p>Chain Mail Skirt</p>
+    <p class="price">$0.02</p>
+    <a target="_blank" href="https://square.link/u/UKTtq8YZ?src=embed">Buy now</a>
   </div>
+</div>
+
+   <!-- Product Card 4 -->
+ <div class="product-card">
+  <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/06a71a078624f7aad5f723119fa00417514a6477/original.png" alt="Chain Mail Tank Top" onerror="this.style.display='none'" />
+  <div class="card-content">
+    <p>Chain Mail Tank Top</p>
+    <p class="price">$0.02</p>
+    <a target="_blank" href="https://square.link/u/vCGyzaDj?src=embed">Buy now</a>
+  </div>
+</div>
+
 </section>
 
+    <!-- page break -->
 
+<section class="page-break">
+</section>
 
+    <!-- Custom order request -->
 
+<section id="custom-order" style="padding: 2em 1em; font-family: 'Cormorant Garamond', serif;">
+  <h2>Custom Order Request</h2>
+  <form action="https://formsubmit.co/in" method="POST" style="max-width: 500px; margin: 0 auto;">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <label for="name">Name</label><br />
+    <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 1em;" />
+
+    <label for="email">Email</label><br />
+    <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 1em;" />
+<label for="type">Type of Piece</label><br />
+<select id="type" name="type" required style="width: 100%; margin-bottom: 1em;">
+  <option value="" disabled selected>Select one</option>
+  <option value="necklace">Necklace</option>
+  <option value="top">Top</option>
+  <option value="harness">Harness</option>
+  <option value="other">Other</option>
+</select>
+<label for="measurements">Measurements (bust, waist, hips, etc.)</label><br />
+<textarea id="measurements" name="measurements" rows="3" style="width: 100%; margin-bottom: 1em;"></textarea>
+<label for="timeline">Do you have a deadline or event date?</label><br />
+<input type="text" id="timeline" name="timeline" placeholder="MM/DD or event name" style="width: 100%; margin-bottom: 1em;" />
+
+    <label for="message">What are you dreaming of?</label><br />
+    <textarea id="message" name="message" rows="6" required style="width: 100%; margin-bottom: 1em;"></textarea>
+
+    <button type="submit"
+            style="background-color: black; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-weight: bold;">
+      Send Request
+    </button>
+  </form>
+</section>
 
     <section id="about">
       <h2>About</h2>
@@ -189,6 +209,22 @@
   </div>
   <p>© Filth Chains 2025 — Minneapolis</p>
 </footer>
+<script>
+  window.addEventListener('load', function(){
+    new Glider(document.querySelector('.glider'), {
+      slidesToShow: 2.5,
+      slidesToScroll: 1,
+      draggable: true,
+      dots: false,
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      }
+    });
+  });
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 
   </body>
 </html>
