@@ -90,7 +90,11 @@ nav a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
   padding: 2em 0;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
 
 /* @media (max-width: 768px) {
   .necklace-grid {
@@ -102,6 +106,9 @@ nav a {
    3d Model Wrapper
 ============================ */
 .model-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   max-width: 300px;
@@ -387,7 +394,7 @@ footer {
 }
 
   #necklace .product {
-  height:250px;
+  height:150px;
 }
   #custom-order {
     width: 100%;
