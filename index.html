@@ -9,6 +9,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+ <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 
   <!-- Model Viewer -->
@@ -53,39 +54,26 @@
 
 
 
-
-   <section id="necklace-gallery" class="section-bg necklace-bg">
+<section id="necklace-gallery" class="section-bg necklace-bg">
   <div class="necklace-grid">
-    
-    <!-- Model 1 -->
-    <model-viewer 
-      src="models/knighttime.glb"
-      poster="images/knighttime_1.png"
-      alt="Knighttime"
-      auto-rotate
-      camera-controls
 
-      style="width: 100%; height: 400px;">
-    </model-viewer>
+    <!-- Model 1 -->
+    <div class="model-wrapper" data-model="models/knighttime.glb" data-poster="images/knighttime_1.png" data-alt="Knighttime">
+      <img class="model-poster" src="images/knighttime_1.png" alt="Knighttime Poster">
+      <button class="load-model-btn">Tap to View</button>
+    </div>
+
     <!-- Model 2 -->
-    <model-viewer 
-      src="models/raidne.glb"
-      poster="images/raidne_3.png"
-      alt="Raidne"
-      auto-rotate
-      camera-controls
-      style="width: 100%; height: 400px;">
-    </model-viewer>
+    <div class="model-wrapper" data-model="models/raidne.glb" data-poster="images/raidne_3.png" data-alt="Raidne">
+      <img class="model-poster" src="images/raidne_3.png" alt="Raidne Poster">
+      <button class="load-model-btn">Tap to View</button>
+    </div>
 
     <!-- Model 3 -->
-    <model-viewer 
-      src="models/roxy.glb"
-      poster="images/roxy_2.png"
-      alt="Roxy"
-      auto-rotate
-      camera-controls
-      style="width: 100%; height: 400px;">
-    </model-viewer>
+    <div class="model-wrapper" data-model="models/roxy.glb" data-poster="images/roxy_2.png" data-alt="Roxy">
+      <img class="model-poster" src="images/roxy_2.png" alt="Roxy Poster">
+      <button class="load-model-btn">Tap to View</button>
+    </div>
 
   </div>
 </section>
@@ -214,22 +202,27 @@
   </div>
   <p>© Filth Chains 2025 — Minneapolis</p>
 </footer>
-<script>
-  window.addEventListener('load', function(){
-    new Glider(document.querySelector('.glider'), {
-      slidesToShow: 2.5,
-      slidesToScroll: 1,
-      draggable: true,
-      dots: false,
-      arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-      }
+<script type="module">
+  document.querySelectorAll('.model-wrapper').forEach(wrapper => {
+    const button = wrapper.querySelector('.load-model-btn');
+
+    button.addEventListener('click', () => {
+      const src = wrapper.dataset.model;
+      const alt = wrapper.dataset.alt;
+
+      const modelViewer = document.createElement('model-viewer');
+      modelViewer.setAttribute('src', src);
+      modelViewer.setAttribute('alt', alt);
+      modelViewer.setAttribute('auto-rotate', '');
+      modelViewer.setAttribute('camera-controls', '');
+      modelViewer.style.width = '100%';
+      modelViewer.style.height = '100%';
+
+      wrapper.innerHTML = '';
+      wrapper.appendChild(modelViewer);
     });
   });
 </script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 
   </body>
 </html>
