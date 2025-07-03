@@ -17,6 +17,7 @@ body {
   background-position: top center, bottom center;
   background-size: 1250px, 1000px;
   color: var(--black);
+  
 }
 
 /* ============================
@@ -395,6 +396,7 @@ footer {
     width: 100%;
     max-width: 100%;
     padding: 1.5em;
+    box-sizing: border-box;
   }
 
   .necklace-grid model-viewer {
@@ -403,4 +405,18 @@ footer {
   #necklace .product {
   height:250px;
 }
+  #custom-order {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  #custom-order input,
+  #custom-order textarea,
+  #custom-order select {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
