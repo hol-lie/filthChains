@@ -91,11 +91,11 @@ nav a {
   padding: 2em 0;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .necklace-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 /* ============================
    Section Wrapper
@@ -396,4 +396,11 @@ footer {
     max-width: 100%;
     padding: 1.5em;
   }
+
+  .necklace-grid model-viewer {
+    height: 100px;
+  }
+  #necklace .product {
+  height:250px;
+}
 }
