@@ -256,7 +256,7 @@ Shop Section (2-column)
    page break
 ============================ */
 .page-break_top{
-  background-image: url('models/page_break.png');
+  background-image: url('images/section-background-2.png');
   background-size: cover;
   height: 200px;
   background-repeat: no-repeat;
